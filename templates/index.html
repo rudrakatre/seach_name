@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Seach Name</title>
+    <link href='/static/css/bootstrap.css' type="text/css"
+          rel="stylesheet" />
+    <link href='/static/css/style.css' type="text/css"
+          rel="stylesheet" />
+</head>
+<body>
+    <div class="container padding-top text-center">
+        <form class="form-inline" id="search-form" method="GET">
+            <div class="form-group">
+                <label for="search-key">Seach</label>
+                <input type="text" class="form-control" id="search-key" name="key" placeholder="Enter Keyword here!">
+            </div>
+
+            <button type="button" class="btn btn-default" id="search">Seach</button>
+        </form>
+
+        <h2 id="message">Please enter more than 3 letter</h2>
+        <ul class="list-unstyled" id="result-list">
+        </ul>
+        {% if message %}
+        <h3>Error Occured While Seaching the data</h3>
+        {% endif %}
+    </div>
+
+    <script src="/static/js/jquery-3.3.1.min.js"></script>
+    <script src="/static/js/search.js"></script>
+</body>
+</html>
